@@ -1,0 +1,123 @@
+*{
+    font-family: 'IBM Plex Mono';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-background {
+    background-color: #333333;
+    color: #cecece;
+    height: 100vh;
+    width: 100vw;
+    animation: home-background 1.5s forwards;
+}
+
+@keyframes home-background {
+    0%{
+        width: 20vw;
+    }100%{
+        width: 100vw;
+    }
+}
+
+#home-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    animation: home-items 1.5s forwards;
+}
+
+@keyframes home-items {
+    0%{
+        color: #333333;
+    }100%{
+        color: #cecece;
+    }
+}
+
+#home-items h1 {
+    font-size: 50px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+#home-button {
+    background-color: #cecece;
+    border: none;
+    padding: 10px 70px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+}#home-button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+#date-container {
+    padding: 20px;
+}
+
+/*Bookmarks*/
+
+#title-bookmarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.bookmarks-background {
+    background-color: #333333;
+    color: #cecece;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bookmark-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555555;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}.bookmark:hover {
+    background-color: #333333;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+
+.bookmark img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
